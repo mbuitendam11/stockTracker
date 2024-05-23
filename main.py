@@ -52,13 +52,16 @@ percentageDiff = abs(float(yesterday_data) / float(previous_data) * 100)
 if percentageDiff > 100:
     remain = abs(percentageDiff - 100)
     print(f"{STOCK_NAME} closed up {remain}\n")
+    print(f"{STOCK_NAME} closed at {yesterday_data}")
     print(body)
 elif percentageDiff == 100:
     print(f"No Change, remains at {previous_data}\n")
+    print(f"{STOCK_NAME} closed at {yesterday_data}")
     print(body)
 elif percentageDiff < 100:
     remain = abs(percentageDiff - 100)
     print(f"{STOCK_NAME} closed down {remain}\n")
+    print(f"{STOCK_NAME} closed at {yesterday_data}")
     print(body)
 
 
